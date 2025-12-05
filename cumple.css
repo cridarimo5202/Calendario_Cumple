@@ -1,0 +1,457 @@
+/* ==================== IMPORTAR FUENTE MODERNA ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* ==================== ESTILOS GENERALES ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+/* ==================== CONTENEDOR PRINCIPAL ==================== */
+.container {
+    max-width: 1200px;
+    min-height: 500px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================== ENCABEZADO ==================== */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+}
+
+/* ==================== PRÓXIMO CUMPLEAÑOS ==================== */
+.next-birthday {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    padding: 20px 30px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 10px 25px rgba(245, 87, 108, 0.3);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.next-birthday-icon {
+    font-size: 40px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.next-birthday-info {
+    text-align: left;
+}
+
+.next-birthday-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.next-birthday-details {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.days-remaining {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+/* ==================== GRID DE MESES ==================== */
+.months-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* ==================== CAJAS DE MESES ==================== */
+.month-box {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.month-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.month-header {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.month-header:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.month-name {
+    flex: 1;
+}
+
+.arrow {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+    transform: rotate(180deg);
+}
+
+/* ==================== CONTENIDO DESPLEGABLE ==================== */
+.month-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    background: linear-gradient(to bottom, #f8f9ff, #ffffff);
+}
+
+.month-content.active {
+    max-height: 200px;
+    padding: 10px;  /* Cambiar de "10px 0" a "10px" */
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;  /* Permitir que los items se envuelvan */
+    gap: 10px;  /* Espacio entre items */
+}
+
+/* ==================== ESTILO DEL SCROLL ==================== */
+.month-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.month-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.month-content::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+}
+
+.month-content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* ==================== ITEMS DE CUMPLEAÑOS ==================== */
+.birthday-item {
+    display: inline-flex;  /* Cambiar de flex a inline-flex */
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: calc(50% - 10px);  /* Dos columnas con espacio */
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.birthday-item:hover {
+    background: rgba(102, 126, 234, 0.1);
+    transform: translateX(5px);
+}
+
+.birthday-icon {
+    font-size: 24px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.birthday-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.birthday-item .name {
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;  /* Un poco más pequeño */
+}
+
+.birthday-item .date {
+    color: #888;
+    font-size: 12px;  /* Un poco más pequeño */
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+/* Tablets grandes y pantallas medianas */
+@media (max-width: 1024px) {
+    .container {
+        padding: 30px;
+        min-height: auto;
+    }
+    
+    .months-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
+
+/* Tablets pequeñas */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 15px;
+    }
+    
+    .container {
+        padding: 25px;
+        border-radius: 15px;
+    }
+    
+    h1 {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+    
+    .header {
+        margin-bottom: 30px;
+    }
+    
+    .next-birthday {
+        padding: 15px 20px;
+        max-width: 100%;
+    }
+    
+    .next-birthday-icon {
+        font-size: 35px;
+    }
+    
+    .next-birthday-details {
+        font-size: 14px;
+    }
+    
+    .months-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .month-header {
+        padding: 15px;
+        font-size: 15px;
+    }
+    
+    .birthday-item {
+        width: 100%;  /* Una sola columna en tablets */
+    }
+}
+
+/* Móviles grandes (landscape) */
+@media (max-width: 640px) {
+    .months-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .month-content.active {
+        max-height: 250px;
+    }
+}
+
+/* Móviles medianos y pequeños */
+@media (max-width: 480px) {
+    body {
+        padding: 15px 10px;
+    }
+    
+    .container {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+    
+    h1 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+    
+    .header {
+        margin-bottom: 25px;
+    }
+    
+    .next-birthday {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        gap: 10px;
+    }
+    
+    .next-birthday-icon {
+        font-size: 30px;
+    }
+    
+    .next-birthday-info {
+        text-align: center;
+    }
+    
+    .next-birthday-label {
+        font-size: 11px;
+    }
+    
+    .next-birthday-details {
+        font-size: 13px;
+    }
+    
+    .days-remaining {
+        display: block;
+        margin: 8px auto 0;
+        width: fit-content;
+    }
+    
+    .months-grid {
+        grid-template-columns: 1fr;  /* Una sola columna en móviles */
+        gap: 12px;
+    }
+    
+    .month-header {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    
+    .month-content.active {
+        max-height: 300px;
+        padding: 8px;
+        gap: 8px;
+    }
+    
+    .birthday-item {
+        width: 100%;
+        padding: 10px 12px;
+        gap: 8px;
+    }
+    
+    .birthday-icon {
+        font-size: 20px;
+    }
+    
+    .birthday-item .name {
+        font-size: 13px;
+    }
+    
+    .birthday-item .date {
+        font-size: 11px;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 360px) {
+    h1 {
+        font-size: 20px;
+    }
+    
+    .container {
+        padding: 15px 10px;
+    }
+    
+    .next-birthday {
+        padding: 12px;
+    }
+    
+    .next-birthday-details {
+        font-size: 12px;
+    }
+    
+    .month-header {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+    
+    .birthday-item {
+        padding: 8px 10px;
+    }
+}
+
+/* ==================== SCROLL SUAVE ==================== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==================== ANIMACIÓN DE ENTRADA PARA ITEMS ==================== */
+.birthday-item {
+    animation: slideIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+.month-content.active .birthday-item:nth-child(1) { animation-delay: 0.1s; }
+.month-content.active .birthday-item:nth-child(2) { animation-delay: 0.2s; }
+.month-content.active .birthday-item:nth-child(3) { animation-delay: 0.3s; }
+.month-content.active .birthday-item:nth-child(4) { animation-delay: 0.4s; }
+.month-content.active .birthday-item:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Cumpleaños</title>
+    <link rel="stylesheet" href="cumpleaños.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎂 Calendario de Cumpleaños</h1>
+            <!-- Este contenedor se actualizará automáticamente con JavaScript -->
+            <div class="next-birthday" id="nextBirthday">
+                <div class="next-birthday-icon">🎉</div>
+                <div class="next-birthday-info">
+                    <p class="next-birthday-label">Próximo Cumpleaños</p>
+                    <p class="next-birthday-details" id="nextBirthdayDetails">Cargando...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="months-grid">
+            <!-- ENERO -->
+            <div class="month-box">
+                <div class="month-header" onclick="toggleMonth(this)">
+                    <span class="month-name">enero</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="month-content">
+                    <!-- AÑADIR CUMPLEAÑOS AQUÍ: Format: data-date="MM-DD" -->
+                    <div class="birthday-item" data-date="01-15">
+                        <div class="birthday-icon">🎈</div>
+                        <div class="birthday-info">
+                            <span class="name">Juan Pérez</span>
+                            <span class="date">15 de enero</span>
+                        </div>
+                    </div>
+                    <div class="birthday-item" data-date="01-23">
+                        <div class="birthday-icon">🎈</div>
+                        <div class="birthday-info">
+                            <span class="name">María García</span>
+                            <span class="date">23 de enero</span>
+                        </div>
+                    </div>
+                    <div class="birthday-item" data-date="01-23">
+                        <div class="birthday-icon">🎈</div>
+                        <div class="birthday-info">
+                            <span class="name">María García</span>
+                            <span class="date">23 de enero</span>
+                        </div>
+                    </div>
+                    <div class="birthday-item" data-date="01-23">
+                        <div class="birthday-icon">🎈</div>
+                        <div class="birthday-info">
+                            <span class="name">María García</span>
+                            <span class="date">23 de enero</span>
+                        </div>
+                    </div>
+                    <div class="birthday-item" data-date="01-23">
+                        <div class="birthday-icon">🎈</div>
+                        <div class="birthday-info">
+                            <span class="name">María García</span>
+                            <span class="date">23 de enero</span>
+                        </div>
+                    </div>
+                    <div class="birthday-item" data-date="01-23">
+                        <div class="birthday-icon">🎈</div>
+                        <div class="birthday-info">
+                            <span class="name">María García</span>
+                            <span class="date">23 de enero</span>
+                        </div>
+                    </div>
+                    <div class="birthday-item" data-date="01-23">
+                        <div class="birthday-icon">🎈</div>
+                        <div class="birthday-info">
+                            <span class="name">María García</span>
+                            <span class="date">23 de enero</span>
+                        </div>
+                    </div>
+                    <div class="birthday-item" data-date="01-23">
+                        <div class="birthday-icon">🎈</div>
+                        <div class="birthday-info">
+                            <span class="name">María García</span>
+                            <span class="date">23 de enero</span>
+                        </div>
+                    </div>
+                    <div class="birthday-item" data-date="01-23">
+                        <div class="birthday-icon">🎈</div>
+                        <div class="birthday-info">
+                            <span class="name">María García</span>
+                            <span class="date">23 de enero</span>
+                        </div>
+                    </div>
+                    <div class="birthday-item" data-date="01-23">
+                        <div class="birthday-icon">🎈</div>
+                        <div class="birthday-info">
+                            <span class="name">María García</span>
+                            <span class="date">23 de enero</span>
+                        </div>
+                    </div>
+                    <div class="birthday-item" data-date="01-23">
+                        <div class="birthday-icon">🎈</div>
+                        <div class="birthday-info">
+                            <span class="name">María García</span>
+                            <span class="date">23 de enero</span>
+                        </div>
+                    </div>
+                    <div class="birthday-item" data-date="01-23">
+                        <div class="birthday-icon">🎈</div>
+                        <div class="birthday-info">
+                            <span class="name">María García</span>
+                            <span class="date">23 de enero</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- FEBRERO -->
+            <div class="month-box">
+                <div class="month-header" onclick="toggleMonth(this)">
+                    <span class="month-name">febrero</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="month-content">
+                    <!-- IMPORTANTE: Añade data-date="MM-DD" para que funcione el contador -->
+                    <div class="birthday-item" data-date="02-05">
+                        <div class="birthday-icon">🎈</div>
+                        <div class="birthday-info">
+                            <span class="name">Carlos López</span>
+                            <span class="date">5 de febrero</span>
+                        </div>
+                    </div>
+                    <div class="birthday-item" data-date="02-14">
+                        <div class="birthday-icon">🎈</div>
+                        <div class="birthday-info">
+                            <span class="name">Ana Valentina</span>
+                            <span class="date">14 de febrero</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MARZO -->
+            <div class="month-box">
+                <div class="month-header" onclick="toggleMonth(this)">
+                    <span class="month-name">marzo</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="month-content">
+                    <div class="birthday-item" data-date="03-12">
+                        <div class="birthday-icon">🎈</div>
+                        <div class="birthday-info">
+                            <span class="name">Ana Martínez</span>
+                            <span class="date">12 de marzo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ABRIL -->
+            <div class="month-box">
+                <div class="month-header" onclick="toggleMonth(this)">
+                    <span class="month-name">abril</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="month-content">
+                    <!-- AÑADIR CUMPLEAÑOS DE ABRIL AQUÍ -->
+                </div>
+            </div>
+
+            <!-- MAYO -->
+            <div class="month-box">
+                <div class="month-header" onclick="toggleMonth(this)">
+                    <span class="month-name">mayo</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="month-content">
+                    <!-- AÑADIR CUMPLEAÑOS DE MAYO AQUÍ -->
+                </div>
+            </div>
+
+            <!-- JUNIO -->
+            <div class="month-box">
+                <div class="month-header" onclick="toggleMonth(this)">
+                    <span class="month-name">junio</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="month-content">
+                    <!-- AÑADIR CUMPLEAÑOS DE JUNIO AQUÍ -->
+                </div>
+            </div>
+
+            <!-- JULIO -->
+            <div class="month-box">
+                <div class="month-header" onclick="toggleMonth(this)">
+                    <span class="month-name">julio</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="month-content">
+                    <!-- AÑADIR CUMPLEAÑOS DE JULIO AQUÍ -->
+                </div>
+            </div>
+
+            <!-- AGOSTO -->
+            <div class="month-box">
+                <div class="month-header" onclick="toggleMonth(this)">
+                    <span class="month-name">agosto</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="month-content">
+                    <!-- AÑADIR CUMPLEAÑOS DE AGOSTO AQUÍ -->
+                    <div class="birthday-item" data-date="08-13">
+                        <div class="birthday-icon">💙</div>
+                        <div class="birthday-info">
+                            <span class="name">Sara Pinto</span>
+                            <span class="date">13 de agosto</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEPTIEMBRE -->
+            <div class="month-box">
+                <div class="month-header" onclick="toggleMonth(this)">
+                    <span class="month-name">septiembre</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="month-content">
+                    <!-- AÑADIR CUMPLEAÑOS DE SEPTIEMBRE AQUÍ -->
+                </div>
+            </div>
+
+            <!-- OCTUBRE -->
+            <div class="month-box">
+                <div class="month-header" onclick="toggleMonth(this)">
+                    <span class="month-name">octubre</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="month-content">
+                    <!-- AÑADIR CUMPLEAÑOS DE OCTUBRE AQUÍ -->
+                </div>
+            </div>
+
+            <!-- NOVIEMBRE -->
+            <div class="month-box">
+                <div class="month-header" onclick="toggleMonth(this)">
+                    <span class="month-name">noviembre</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="month-content">
+                    <!-- AÑADIR CUMPLEAÑOS DE NOVIEMBRE AQUÍ -->
+                </div>
+            </div>
+
+            <!-- DICIEMBRE -->
+            <div class="month-box">
+                <div class="month-header" onclick="toggleMonth(this)">
+                    <span class="month-name">diciembre</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="month-content">
+
+
+                    <div class="birthday-item" data-date="12-04">
+                        <div class="birthday-icon">🎈</div>
+                        <div class="birthday-info">
+                            <span class="name">Saris Pinto</span>
+                            <span class="date">04 de diciembre</span>
+                        </div>
+                    </div>
+
+                    <div class="birthday-item" data-date="12-25">
+                        <div class="birthday-icon">🎈</div>
+                        <div class="birthday-info">
+                            <span class="name">Jesús Navidad</span>
+                            <span class="date">25 de diciembre</span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ==================== FUNCIÓN PARA ABRIR Y CERRAR MESES ====================
+        function toggleMonth(element) {
+            const content = element.nextElementSibling;
+            const arrow = element.querySelector('.arrow');
+            const allContents = document.querySelectorAll('.month-content');
+            const allArrows = document.querySelectorAll('.arrow');
+
+            // Cerrar todos los demás meses
+            allContents.forEach((item, index) => {
+                if (item !== content) {
+                    item.classList.remove('active');
+                    allArrows[index].classList.remove('rotate');
+                }
+            });
+
+            // Abrir o cerrar el mes seleccionado
+            content.classList.toggle('active');
+            arrow.classList.toggle('rotate');
+        }
+
+        // ==================== CALCULAR PRÓXIMO CUMPLEAÑOS ====================
+        function calculateNextBirthday() {
+            const today = new Date();
+            const currentYear = today.getFullYear();
+
+            // Obtener todos los cumpleaños
+            const allBirthdays = document.querySelectorAll('.birthday-item[data-date]');
+            let nextBirthday = null;
+            let minDays = Infinity;
+
+            allBirthdays.forEach(item => {
+                const dateStr = item.getAttribute('data-date'); // Format: "MM-DD"
+                const [month, day] = dateStr.split('-').map(num => parseInt(num));
+
+                // Crear fecha del cumpleaños este año (a las 00:00:00)
+                let birthdayThisYear = new Date(currentYear, month - 1, day);
+
+                // Normalizar la fecha de hoy a las 00:00:00 para comparación correcta
+                let todayNormalized = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+
+                // Si ya pasó este año (sin contar hoy), calcular para el próximo año
+                if (birthdayThisYear < todayNormalized) {
+                    birthdayThisYear = new Date(currentYear + 1, month - 1, day);
+                }
+
+                // Calcular días restantes
+                const diffTime = birthdayThisYear - todayNormalized;
+                const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+                // Guardar el más cercano
+                if (diffDays < minDays) {
+                    minDays = diffDays;
+                    nextBirthday = {
+                        name: item.querySelector('.name').textContent,
+                        date: item.querySelector('.date').textContent,
+                        days: diffDays,
+                        fullDate: birthdayThisYear
+                    };
+                }
+            });
+
+            // Actualizar la información en el HTML
+            if (nextBirthday) {
+                const day = nextBirthday.fullDate.getDate();
+                const month = nextBirthday.fullDate.getMonth() + 1;
+                const year = nextBirthday.fullDate.getFullYear();
+
+                const daysText = nextBirthday.days === 0 ? '¡HOY!' :
+                    nextBirthday.days === 1 ? 'mañana' :
+                        `en ${nextBirthday.days} días`;
+
+                document.getElementById('nextBirthdayDetails').innerHTML =
+                    `<strong>${day}/${month}/${year}</strong> - ${nextBirthday.name} <span class="days-remaining">${daysText}</span>`;
+            } else {
+                document.getElementById('nextBirthdayDetails').textContent =
+                    'No hay cumpleaños registrados';
+            }
+        }
+
+        // EJECUTAR AL CARGAR LA PÁGINA
+        window.addEventListener('load', calculateNextBirthday);
+
+        // ACTUALIZAR CADA DÍA (opcional)
+        setInterval(calculateNextBirthday, 1000 * 60 * 60 * 24);
+    </script>
+</body>
+
+</html>
